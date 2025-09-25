@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MauiCatAlarm.ViewModels"
+             x:DataType="vm:AlarmViewModel"
+             x:Class="MauiCatAlarm.AlarmPage"
+             Title="AlarmPage"
+             Style="{StaticResource DangerPage}">
+    <VerticalStackLayout>
+        <Label Text="Math Wake"
+               Style="{StaticResource SubheadingDanger}"/>
+
+        <Label Text="{Binding Challenge.Prompt}"
+               Style="{StaticResource HeadingDanger}"/>
+
+        <Entry Placeholder="Sua Resposta"
+               Keyboard="Numeric"
+               IsSpellCheckEnabled="False"
+               Text="{Binding ChallengeEntryText}"
+               ReturnType="Done"
+               ReturnCommand="{Binding DismissAlarmCommand}"
+               Style="{StaticResource DangerEntry}"/>
+
+        <Button Text="Parar Alarme"
+                Command="{Binding DismissAlarmCommand}"
+                Style="{StaticResource DangerButton}"/>
+
+        <Button Text="Nova Questão"
+                Command="{Binding NewChallengeCommand}"
+                Style="{StaticResource SecondaryDangerButton}"/>
+    </VerticalStackLayout>
+</ContentPage>

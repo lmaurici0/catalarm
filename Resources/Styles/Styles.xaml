@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Style TargetType="Button"
+           x:Key="PrimaryButton">
+        <Setter Property="TextColor"
+                Value="{StaticResource TextSecondary}" />
+        <Setter Property="BackgroundColor"
+                Value="{StaticResource BackgroundButtonPrimary}" />
+        <Setter Property="FontFamily"
+                Value="Public Sans" />
+        <Setter Property="FontSize"
+                Value="16" />
+        <Setter Property="BorderWidth"
+                Value="0" />
+        <Setter Property="CornerRadius"
+                Value="6" />
+        <Setter Property="Padding"
+                Value="12" />
+        <Setter Property="MinimumHeightRequest"
+                Value="48" />
+        <Setter Property="MinimumWidthRequest"
+                Value="240" />
+        <Setter Property="Margin"
+                Value="0,6" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Pressed">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor"
+                                    Value="{StaticResource BackgroundButtonPressed}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor"
+                                    Value="{StaticResource Neutral700}" />
+                            <Setter Property="BackgroundColor"
+                                    Value="{StaticResource Neutral300}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointerOver" />
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Button"
+           x:Key="SecondaryButton"
+           BaseResourceKey="PrimaryButton">
+        <Setter Property="TextColor"
+                Value="{StaticResource BackgroundButtonPrimary}" />
+        <Setter Property="BorderColor"
+                Value="{StaticResource BackgroundButtonPrimary}" />
+        <Setter Property="BorderWidth"
+                Value="2" />
+        <Setter Property="BackgroundColor"
+                Value="Transparent" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Pressed">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor"
+                                    Value="{StaticResource BackgroundButtonPressed}" />
+                            <Setter Property="BackgroundColor"
+                                    Value="Transparent" />
+                            <Setter Property="BorderColor"
+                                    Value="{StaticResource BackgroundButtonPressed}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor"
+                                    Value="{StaticResource Neutral300}" />
+                            <Setter Property="BackgroundColor"
+                                    Value="Transparent" />
+                            <Setter Property="BorderColor"
+                                    Value="{StaticResource Neutral300}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointerOver" />
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Button"
+           x:Key="DangerButton"
+           BaseResourceKey="PrimaryButton">
+        <Setter Property="TextColor"
+                Value="{StaticResource TextSecondary}" />
+        <Setter Property="BackgroundColor"
+                Value="{StaticResource BackgroundDangerButtonPrimary}" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Pressed">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor"
+                                    Value="{StaticResource BackgroundDangerButtonPressed}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor"
+                                    Value="{StaticResource Neutral700}" />
+                            <Setter Property="BackgroundColor"
+                                    Value="{StaticResource Neutral300}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointerOver" />
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Button"
+           x:Key="SecondaryDangerButton"
+           BaseResourceKey="PrimaryButton">
+        <Setter Property="TextColor"
+                Value="{StaticResource BackgroundDangerButtonPrimary}" />
+        <Setter Property="BorderColor"
+                Value="{StaticResource BackgroundDangerButtonPrimary}" />
+        <Setter Property="BorderWidth"
+                Value="2" />
+        <Setter Property="BackgroundColor"
+                Value="Transparent" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Pressed">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor"
+                                    Value="{StaticResource BackgroundDangerButtonPressed}" />
+                            <Setter Property="BackgroundColor"
+                                    Value="Transparent" />
+                            <Setter Property="BorderColor"
+                                    Value="{StaticResource BackgroundDangerButtonPressed}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor"
+                                    Value="{StaticResource Neutral300}" />
+                            <Setter Property="BackgroundColor"
+                                    Value="Transparent" />
+                            <Setter Property="BorderColor"
+                                    Value="{StaticResource Neutral300}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="PointerOver" />
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Entry"
+           x:Key="DangerEntry">
+        <Setter Property="TextColor"
+                Value="{StaticResource TextDangerPrimary}" />
+        <Setter Property="BackgroundColor"
+                Value="Transparent" />
+        <Setter Property="FontFamily"
+                Value="Space Grotesk" />
+        <Setter Property="FontSize"
+                Value="48" />
+        <Setter Property="PlaceholderColor"
+                Value="{StaticResource TextDangerMuted}" />
+        <Setter Property="MinimumHeightRequest"
+                Value="48" />
+        <Setter Property="MinimumWidthRequest"
+                Value="240" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor"
+                                    Value="{StaticResource TextDangerMuted}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Label">
+        <Setter Property="TextColor"
+                Value="{StaticResource TextPrimary}" />
+        <Setter Property="BackgroundColor"
+                Value="Transparent" />
+        <Setter Property="FontFamily"
+                Value="Public Sans" />
+        <Setter Property="FontSize"
+                Value="16" />
+        <Setter Property="LineHeight"
+                Value="1" />
+    </Style>
+
+    <Style TargetType="Label"
+           x:Key="Heading">
+        <Setter Property="TextColor"
+                Value="{StaticResource TextPrimary}" />
+        <Setter Property="FontSize"
+                Value="60" />
+        <Setter Property="LineHeight"
+                Value="1" />
+        <Setter Property="FontFamily"
+                Value="Space Grotesk" />
+        <Setter Property="Margin"
+                Value="0,0,0,64" />
+    </Style>
+
+    <Style TargetType="Label"
+           x:Key="HeadingDanger"
+           BaseResourceKey="Heading">
+        <Setter Property="TextColor"
+                Value="{StaticResource TextDangerPrimary}" />
+    </Style>
+
+    <Style TargetType="Label"
+           x:Key="Subheading">
+        <Setter Property="TextColor"
+                Value="{StaticResource TextPrimary}" />
+        <Setter Property="FontSize"
+                Value="24" />
+        <Setter Property="LineHeight"
+                Value="1" />
+        <Setter Property="FontFamily"
+                Value="Space Grotesk" />
+    </Style>
+
+    <Style TargetType="Label"
+           x:Key="SubheadingDanger"
+           BaseResourceKey="Subheading">
+        <Setter Property="TextColor"
+                Value="{StaticResource TextDangerPrimary}" />
+    </Style>
+
+    <Style TargetType="Label"
+           x:Key="SubheadingMonth">
+        <Setter Property="TextColor"
+                Value="{StaticResource TextMuted}" />
+        <Setter Property="FontSize"
+                Value="24" />
+        <Setter Property="LineHeight"
+                Value="1" />
+        <Setter Property="FontFamily"
+                Value="Space Grotesk" />
+    </Style>
+
+    <Style TargetType="Label"
+           x:Key="SubheadingDayNumber">
+        <Setter Property="TextColor"
+                Value="{StaticResource TextPrimary}" />
+        <Setter Property="FontSize"
+                Value="24" />
+        <Setter Property="LineHeight"
+                Value="1" />
+        <Setter Property="FontFamily"
+                Value="Space Grotesk Bold" />
+    </Style>
+
+    <Style TargetType="TimePicker">
+        <Setter Property="TextColor"
+                Value="{StaticResource TextPrimary}" />
+        <Setter Property="BackgroundColor"
+                Value="Transparent" />
+        <Setter Property="FontFamily"
+                Value="Space Grotesk" />
+        <Setter Property="FontSize"
+                Value="36" />
+    </Style>
+
+    <Style TargetType="Page"
+           ApplyToDerivedTypes="True">
+        <Setter Property="Padding"
+                Value="24" />
+        <Setter Property="BackgroundColor"
+                Value="{StaticResource BackgroundBase}" />
+    </Style>
+
+    <Style TargetType="Page"
+           ApplyToDerivedTypes="True"
+           x:Key="DangerPage">
+        <Setter Property="Padding"
+                Value="24" />
+        <Setter Property="BackgroundColor"
+                Value="{StaticResource BackgroundDanger}" />
+    </Style>
+
+</ResourceDictionary>

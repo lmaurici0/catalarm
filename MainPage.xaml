@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MauiCatAlarm.ViewModels"
+             x:Class="MauiCatAlarm.MainPage"
+             x:DataType="vm:MainViewModel">
+    <ScrollView>
+        <VerticalStackLayout>
+            <VerticalStackLayout Spacing="0">
+                <HorizontalStackLayout HorizontalOptions="Start"
+                                       Spacing="6"
+                                       Padding="0">
+                    <Label Text="{Binding CurrentWeekday}"
+                           Style="{StaticResource Subheading}"
+                           Margin="0,0,48,0" />
+                    <Label Text="{Binding CurrentMonth}"
+                           Style="{StaticResource SubheadingMonth}" />
+                    <Label Text="{Binding CurrentDayNumber}"
+                           Style="{StaticResource SubheadingDayNumber}" />
+                </HorizontalStackLayout>
+
+                <Label Text="{Binding CurrentTime}"
+                       Style="{StaticResource Heading}" />
+            </VerticalStackLayout>
+
+
+            <Label Text="Acorde"
+                   IsVisible="{Binding IsAlarmOngoing}" />
+            <Button Text="Desligar Alarme"
+                    IsVisible="{Binding IsAlarmOngoing}"
+                    Command="{Binding NavigateToAlarmCommand}"
+                    Style="{StaticResource DangerButton}"
+                    Margin="0,0,0,48" />
+
+            <Label Text="Me acordar as:"
+                   IsVisible="{Binding IsAlarmUnset}" />
+            <TimePicker Time="{Binding AlarmTime}"
+                        Format="t"
+                        IsVisible="{Binding IsAlarmUnset}" />
+
+            <Label Text="{Binding EnabledAlarmLabel}"
+                   IsVisible="{Binding IsAlarmSet}" />
+
+            <Button Text="{Binding ToggleAlarmText}"
+                    Command="{Binding ToggleAlarmCommand}"
+                    Style="{StaticResource PrimaryButton}" />
+
+            <Label Text="{Binding AlarmRingtoneName, StringFormat='Alarme: {0}'}"
+                   Margin="0,24,0,0" />
+            <Button Text="Escolha o som"
+                    Command="{Binding UpdateAlarmRingtoneCommand}"
+                    Style="{StaticResource SecondaryButton}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Color x:Key="BackgroundBase">#020E1B</Color>
+    <Color x:Key="BackgroundButtonPrimary">#6141a4</Color>
+    <Color x:Key="BackgroundButtonPressed">#8041a3</Color>
+    <Color x:Key="BackgroundDangerButtonPrimary">#4142a3</Color>
+    <Color x:Key="BackgroundDangerButtonPressed">#4142a3</Color>
+    <Color x:Key="BackgroundDanger">#2A1100</Color>
+    <Color x:Key="TextPrimary">#EEF6FF</Color>
+    <Color x:Key="TextDangerPrimary">#FFF2EA</Color>
+    <Color x:Key="TextSecondary">#001C26</Color>
+    <Color x:Key="TextMuted">#92A1B0</Color>
+    <Color x:Key="TextDangerMuted">#4142a3</Color>
+
+    <Color x:Key="Neutral300">#92A1B0</Color>
+    <Color x:Key="Neutral700">#2E3E4D</Color>
+</ResourceDictionary>
